@@ -20,30 +20,25 @@ You are required to turn in your submission by making a pull request on the
 original repository. Submissions are due by the time listed on the cohort
 calendar.
 
+## Setup
+- Initialize your Express project at the root of this repository:  `npm init -y`
+- Create an Express entry file (app.js) and setup your express application here: `touch app.js`  
+- Install the express and ejs packages
+- We will be using 'EJS' as our 'view engine' - create a `views` directory to store an `index.ejs` file.  
+
 ## Requirements
 
-- When a users makes a request to the root route (`'/'`), they should get a JSON
-    object back with `'99 bottles of beer on the wall'` and a link to a route
-    to `/98`
-- When a number is given in the url (i.e. `/:number_of_bottles`), users should
-    get a JSON object back with:
-    - `'<number> bottles of beer on the wall'` where `<number>` is the value of `:number_of_bottles` and
-    - A link to the next route (i.e. `<number>` minus 1)
-- If there are 0 bottles left, the user should get a JSON object back with:
-  - `0 bottles of beer on the wall` and,
-  - A link back to the top (i.e. 99 bottles of beer on the wall)
-
-A few things to note:
-
-- You should always return a JSON object
-- The properties within your JSON object are up to you. One should be for the
-    message (i.e. `'74 bottles of beer on the wall'`) and the other for the next
-    route (i.e. `localhost:3000/73`)
+- When a number is given in the url (i.e. `/bottles/:number_of_bottles`), the application  should render a view that displays the following:
+    - An `<h1>` tag that shows`'<number> bottles of beer on the wall'` where `<number>` is the value of the request's param `:number_of_bottles`. 
+    - An anchor tag that links to the next route (i.e. `<number>` minus 1)
+- If there are 0 bottles left, the user should see a view that displays:
+   - An `<h1>` tag that shows`'0 bottles of beer on the wall'`. 
+   - An anchor tag that links to the next route (i.e. `/bottles/99` )
+- When a user navigates to  (i.e. `/`), the application should redirect the client to (`/bottles/99`).
 
 ## Bonus
-
-See if you can figure out how to do all of this with a single route. You'll need
-to research how to make parameters optional.
+1. See if you can implement styling: configure the app's static files and customize your CSS
+1. See if you can figure out how to do all of this with a single route. You'll need to research how to make parameters optional.
 
 ## Plagiarism
 
