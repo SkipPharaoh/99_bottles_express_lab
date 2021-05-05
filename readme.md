@@ -21,8 +21,8 @@ original repository. Submissions are due by the time listed on the cohort
 calendar.
 
 ## Setup
-- Initialize your Express project at the root of this repository:  `npm init -y`
-- Create an Express entry file (app.js) and setup your express application here: `touch app.js`  
+- Create an Express entry file (app.js) and setup your express application here: `touch app.js` 
+- Initialize your Express project at the root of this repository:  `npm init -y` 
 - Install the express and ejs packages
 - We will be using 'EJS' as our 'view engine' - create a `views` directory to store an `index.ejs` file.  
 
