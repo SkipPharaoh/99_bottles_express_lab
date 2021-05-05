@@ -33,7 +33,7 @@ calendar.
 - If there are 0 bottles left, the user should see a view that displays:
    - An `<h1>` tag that shows`'0 bottles of beer on the wall'`. 
    - An anchor tag that links to the next route (i.e. `/bottles/99` )
-- When a user navigates to  (i.e. `/`), the application should redirect the client to (`/bottles/99`).
+- When a user navigates to root (i.e. `/`), the application should redirect the client to (`/bottles/99`).
 
 ## Bonus
 1. See if you can implement styling: configure the app's static files and customize your CSS
