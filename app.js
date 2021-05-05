@@ -17,14 +17,9 @@ app.get('/bottles/:number_of_bottles',(req, res)=>{
     const next = bottles-1 >= 0 ? bottles-1 : 99;
     // sets the url number for the next round
     const validNum = !isNaN(req.params.number_of_bottles)
-    // uses isNaN to check if id is a number -- filters for strings entered manually 
-    if(validNum){
-        res.render('index', {bottles, next})
-    }else {
-        // If not valid string, redirect to most recent valid string (default: 99)
-        res.redirect(`/bottles/${lastEntry}`)
-    }  
-    lastEntry = bottles
+    validNum ? res.render('index', {bottles, next}) :res.redirect(`/bottles/${lastEntry}`)
+    // If not valid string, redirect to most recent valid string (default: 99)
+    return lastEntry = bottles
 })
 
 // INITIALIZE SERVER
