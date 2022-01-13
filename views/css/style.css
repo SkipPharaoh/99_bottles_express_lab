@@ -1,0 +1,15 @@
+body {
+    background-color: lightblue;
+    color: red;
+    text-align: center;
+    background-image: url("https://library.kissclipart.com/20181215/hfe/kissclipart-cola-bottle-png-clipart-fizzy-drinks-beer-bottle-853f3ea787dad24a.png");
+    background-size: 900px 700px;
+    background-repeat: no-repeat;
+}
+a {
+    color: navy;
+    text-shadow: 1px 0px 10px white;
+}
+a:hover {
+    color: red;
+}
